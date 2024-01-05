@@ -166,6 +166,86 @@
             </div>
           </div>
         </section>
+        <section id="Laporan">
+          <div class="container">
+            <h3>Laporan Pembina Ekstrakulikulers</h3>
+            <form
+              method="post"
+              class="FormData"
+              action="https://script.google.com/macros/s/AKfycbw-lf4ptaPa7nJyqUY5dTdYqcTuN8U7e8WM84tS3gr5rit6yQE2omygLn2a4D05D1_d/exec"
+            >
+              <div id="submitForm">
+                <label for="name">Nama Pembina:</label>
+                <input
+                  type="text"
+                  placeholder="Contoh: Subuki,M.M"
+                  id="name"
+                  name="Nama Pembina"
+                />
+
+                <label for="visitDate">Tanggal Pelaporan:</label>
+                <input type="date" id="visitDate" name="Tanggal Pelaporan" />
+
+                <label for="purpose">Nama Ekstrakulikuler:</label>
+                <input
+                  type="text"
+                  placeholder="Contoh: Klub Teater"
+                  id="purpose"
+                  name="Nama Ekstrakulikuler"
+                />
+
+                <label for="jumlahAnggota">Jumlah Anggota:</label>
+                <input
+                  type="number"
+                  placeholder="Contoh: 20"
+                  id="jumlahAnggota"
+                  name="Jumlah Peserta Anggota"
+                />
+
+                <label for="rencanaKegiatan">Rencana Kegiatan:</label>
+                <textarea
+                  placeholder="Contoh: Pertunjukan Drama Bulan Depan"
+                  id="rencanaKegiatan"
+                  name="Rencana Kegiatan"
+                ></textarea>
+
+                <label for="prestasiCapaian">Prestasi dan Capaian:</label>
+                <textarea
+                  placeholder="Contoh: Juara 1 Lomba Teater Sekolah"
+                  id="prestasiCapaian"
+                  name="Prestasi dan Capaian"
+                ></textarea>
+
+                <label for="perkembanganKeterampilan"
+                  >Perkembangan Keterampilan:</label
+                >
+                <textarea
+                  placeholder="Contoh: Peningkatan Kemampuan Akting"
+                  id="perkembanganKeterampilan"
+                  name="Perkembangan Keterampilan"
+                ></textarea>
+
+                <label for="kendalaTantangan">Kendala dan Tantangan:</label>
+                <textarea
+                  placeholder="Contoh: Terbatasnya Dana untuk Kostum"
+                  id="kendalaTantangan"
+                  name="Kendala dan Tantangan"
+                ></textarea>
+
+                <label for="dokumentasi">Dokumentasi:</label>
+                <input type="file" id="dokumentasi" name="Dokumentasi" />
+
+                <button
+                  type="button"
+                  class="submit-button"
+                  onclick="submitForm()"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
       </main>
       <footer>
         <div class="layar-dalam">
