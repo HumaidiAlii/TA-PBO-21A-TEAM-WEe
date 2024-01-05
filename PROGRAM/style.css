@@ -317,3 +317,58 @@ footer .layar-dalam .copyright {
 .FormData {
   margin: 0 auto;
 }
+#submitForm {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+textarea,
+input[type="file"] {
+  width: calc(100%);
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.file-label {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #11009e;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  line-height: 180%;
+}
+
+.submit-button:hover {
+  background-color: #4942e4;
+}
+
+@media screen and (max-width: 600px) {
+  #guestForm {
+    max-width: 100%;
+  }
+}
