@@ -7,5 +7,4 @@ Proyek ini bertujuan untuk meningkatkan peninjauan kinerja pelatih serta ketua e
 
 ## Nama Kelompok 
 - Humaidi Ali 
-- Putri Intan Purnama 
-- Rifaldi Pratama 
+- Putri Intan Purnama
