@@ -47,6 +47,65 @@ $(document).ready(function () {
   });
 });
 function submitForm() {
+<<<<<<< HEAD
+  var name = document.getElementById('name').value;
+  var visitDate = document.getElementById('visitDate').value;
+  var purpose = document.getElementById('purpose').value;
+  var jumlahAnggota = document.getElementById('jumlahAnggota').value;
+  var rencanaKegiatan = document.getElementById('rencanaKegiatan').value;
+  var prestasiCapaian = document.getElementById('prestasiCapaian').value;
+  var perkembanganKeterampilan = document.getElementById('perkembanganKeterampilan').value;
+  var kendalaTantangan = document.getElementById('kendalaTantangan').value;
+  var dokumentasi = document.getElementById('dokumentasi').value;
+
+  if (!name || !visitDate || !purpose || !jumlahAnggota || !rencanaKegiatan || !prestasiCapaian || !perkembanganKeterampilan || !kendalaTantangan || !dokumentasi) {
+    alert('Silakan isi semua input.');
+    return;
+  }
+
+  var submitButton = document.querySelector('.submit-button');
+  submitButton.innerHTML = 'being processed';
+  submitButton.disabled = true;
+
+  var url = 'https://script.google.com/macros/s/AKfycbw-lf4ptaPa7nJyqUY5dTdYqcTuN8U7e8WM84tS3gr5rit6yQE2omygLn2a4D05D1_d/exec';
+  var formData = new FormData();
+  formData.append('Nama Pembina', name);
+  formData.append('Tanggal Pelaporan', visitDate);
+  formData.append('Nama Ekstrakulikuler', purpose);
+  formData.append('Jumlah Anggota', jumlahAnggota);
+  formData.append('Rencana Kegiatan', rencanaKegiatan);
+  formData.append('Prestasi dan Capaian', prestasiCapaian);
+  formData.append('Perkembangan Keterampilan', perkembanganKeterampilan);
+  formData.append('Kendala dan Tantangan', kendalaTantangan);
+  formData.append('Dokumentasi', dokumentasi);
+
+  fetch(url, {
+    method: 'POST',
+    body: formData
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Terjadi kesalahan saat mengirim formulir.');
+    }
+    return response.text();
+  })
+  .then(data => {
+    alert('Formulir berhasil dikirim!');
+    showCheckmark();
+    resetForm();
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error.message);
+    alert('Terjadi kesalahan saat mengirim formulir.');
+  });
+}
+
+function showCheckmark() {
+  var submitButton = document.querySelector('.submit-button');
+  submitButton.innerHTML = 'Success \u2713';
+  submitButton.classList.add('success');
+=======
   var name = document.getElementById("name").value;
   var visitDate = document.getElementById("visitDate").value;
   var purpose = document.getElementById("purpose").value;
@@ -117,10 +176,29 @@ function showCheckmark() {
   var submitButton = document.querySelector(".submit-button");
   submitButton.innerHTML = "Success \u2713";
   submitButton.classList.add("success");
+>>>>>>> 87a8ac6eefa6ffd2ca0b11b7a6e089d84fdfe370
 }
 
 function resetForm() {
   setTimeout(function () {
+<<<<<<< HEAD
+    var submitButton = document.querySelector('.submit-button');
+    submitButton.innerHTML = 'Submit';
+    submitButton.classList.remove('success');
+    submitButton.disabled = false;
+
+    // Reset other form fields if needed
+    document.getElementById('name').value = '';
+    document.getElementById('visitDate').value = '';
+    document.getElementById('purpose').value = '';
+    document.getElementById('jumlahAnggota').value = '';
+    document.getElementById('rencanaKegiatan').value = '';
+    document.getElementById('prestasiCapaian').value = '';
+    document.getElementById('perkembanganKeterampilan').value = '';
+    document.getElementById('kendalaTantangan').value = '';
+    document.getElementById('dokumentasi').value = '';
+
+=======
     var submitButton = document.querySelector(".submit-button");
     submitButton.innerHTML = "Submit";
     submitButton.classList.remove("success");
@@ -136,14 +214,24 @@ function resetForm() {
     document.getElementById("perkembanganKeterampilan").value = "";
     document.getElementById("kendalaTantangan").value = "";
     document.getElementById("dokumentasi").value = "";
+>>>>>>> 87a8ac6eefa6ffd2ca0b11b7a6e089d84fdfe370
   }, 2000);
 }
 
 function previewImage() {
+<<<<<<< HEAD
+  var input = document.getElementById('dokumentasi');
+  var preview = document.getElementById('preview');
+=======
   var input = document.getElementById("dokumentasi");
   var preview = document.getElementById("preview");
+>>>>>>> 87a8ac6eefa6ffd2ca0b11b7a6e089d84fdfe370
 
   preview.src = input.value;
 }
 
+<<<<<<< HEAD
+document.getElementById('dokumentasi').addEventListener('change', previewImage);
+=======
 document.getElementById("dokumentasi").addEventListener("change", previewImage);
+>>>>>>> 87a8ac6eefa6ffd2ca0b11b7a6e089d84fdfe370

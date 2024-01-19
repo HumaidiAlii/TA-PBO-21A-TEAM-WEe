@@ -336,12 +336,30 @@ input[type="date"],
 input[type="number"],
 textarea,
 input[type="file"] {
+<<<<<<< HEAD
+  width: calc(100%);    
+=======
   width: calc(100%);
+>>>>>>> 87a8ac6eefa6ffd2ca0b11b7a6e089d84fdfe370
   padding: 8px;
   margin-bottom: 10px;
   box-sizing: border-box;
   text-align: left;
 }
+<<<<<<< HEAD
+  .file-label {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.submit-button {
+  background-color: #11009E;
+=======
 .file-label {
   display: inline-block;
   background-color: #4caf50;
@@ -354,6 +372,7 @@ input[type="file"] {
 
 .submit-button {
   background-color: #11009e;
+>>>>>>> 87a8ac6eefa6ffd2ca0b11b7a6e089d84fdfe370
   color: white;
   padding: 10px 15px;
   border: none;
@@ -364,11 +383,19 @@ input[type="file"] {
 }
 
 .submit-button:hover {
+<<<<<<< HEAD
+  background-color: #4942E4;
+=======
   background-color: #4942e4;
+>>>>>>> 87a8ac6eefa6ffd2ca0b11b7a6e089d84fdfe370
 }
 
 @media screen and (max-width: 600px) {
   #guestForm {
     max-width: 100%;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 87a8ac6eefa6ffd2ca0b11b7a6e089d84fdfe370
