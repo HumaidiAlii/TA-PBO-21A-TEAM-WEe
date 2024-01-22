@@ -155,7 +155,7 @@ function showCheckmark() {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Terjadi kesalahan saat mengirim formulir.");
+        throw new Error("Terjadi kesalahan saat mengirim formulir ini.");
       }
       return response.text();
     })
