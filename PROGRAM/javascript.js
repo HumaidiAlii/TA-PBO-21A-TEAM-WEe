@@ -131,7 +131,9 @@ function showCheckmark() {
     alert("Silakan isi semua input!");
     return;
   }
-
+  var submitButton = document.querySelector(".submit-button");
+  submitButton.innerHTML = "being processed";
+  submitButton.disabled = true;
 
   var url =
     "https://script.google.com/macros/s/AKfycbw-lf4ptaPa7nJyqUY5dTdYqcTuN8U7e8WM84tS3gr5rit6yQE2omygLn2a4D05D1_d/exec";
