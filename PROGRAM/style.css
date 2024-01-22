@@ -346,11 +346,11 @@ input[type="file"] {
 }
   .file-label {
     display: inline-block;
-    background-color: #ced846;
+    background-color: #4CAF50;
     color: white;
     padding: 8px 12px;
     cursor: pointer;
-    border-radius: 6px;
+    border-radius: 5px;
     margin-bottom: 10px;
 }
 
