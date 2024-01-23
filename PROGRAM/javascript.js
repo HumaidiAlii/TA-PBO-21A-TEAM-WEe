@@ -73,7 +73,20 @@ function submitForm() {
     alert("Silakan isi semua input.");
     return;
   }
+  // Validate name, purpose, rencanaKegiatan, prestasiCapaian, perkembanganKeterampilan, kendalaTantangan
+  var regex = /^[a-zA-Z.,;'"\s]+$/;
 
+  if (
+    !regex.test(name) ||
+    !regex.test(purpose) ||
+    !regex.test(rencanaKegiatan) ||
+    !regex.test(prestasiCapaian) ||
+    !regex.test(perkembanganKeterampilan) ||
+    !regex.test(kendalaTantangan)
+  ) {
+    alert("Mohon mengisi hanya dengan huruf, titik, koma, atau tanda kutip.");
+    return;
+  }
   var submitButton = document.querySelector(".submit-button");
   submitButton.innerHTML = "being processed";
   submitButton.disabled = true;
