@@ -86,11 +86,13 @@ function submitForm() {
     !regex.test(perkembanganKeterampilan) ||
     !regex.test(kendalaTantangan)
   ) {
-    alert("Mohon mengisi hanya dengan huruf, titik, koma, atau tanda kutip.");
+    alert(
+      "Mohon mengisi hanya dengan huruf, titik, koma, atau tanda kutip,tidak diperkanankan mengisi mengunkan angka/nomor"
+    );
     return;
   }
   var submitButton = document.querySelector(".submit-button");
-  submitButton.innerHTML = "being processed";
+  submitButton.innerHTML = "sedang diproses";
   submitButton.disabled = true;
 
   var url =
@@ -112,7 +114,7 @@ function submitForm() {
   })
     .then((response) => {
       if (!response.ok) {
-        throw new Error("Terjadi kesalahan saat mengirim formulir.");
+        throw new Error("Terjadi kesalahan saat mengirim formulir!");
       }
       return response.text();
     })
@@ -124,7 +126,7 @@ function submitForm() {
     })
     .catch((error) => {
       console.error("Error:", error.message);
-      alert("Terjadi kesalahan saat mengirim formulir.");
+      alert("Terjadi kesalahan saat mengirim formulir!");
     });
 }
 
