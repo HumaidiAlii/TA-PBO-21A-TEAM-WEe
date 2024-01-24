@@ -49,7 +49,9 @@ $(document).ready(function () {
 function submitForm() {
   var name = document.getElementById("name").value;
   var visitDate = document.getElementById("visitDate").value;
-  var purpose = document.getElementById("purpose").value;
+  var NamaEkstrakulikuler = document.getElementById(
+    "NamaEkstrakulikuler"
+  ).value;
   var jumlahAnggota = document.getElementById("jumlahAnggota").value;
   var rencanaKegiatan = document.getElementById("rencanaKegiatan").value;
   var prestasiCapaian = document.getElementById("prestasiCapaian").value;
@@ -62,7 +64,7 @@ function submitForm() {
   if (
     !name ||
     !visitDate ||
-    !purpose ||
+    !NamaEkstrakulikuler ||
     !jumlahAnggota ||
     !rencanaKegiatan ||
     !prestasiCapaian ||
@@ -78,7 +80,7 @@ function submitForm() {
 
   if (
     !regex.test(name) ||
-    !regex.test(purpose) ||
+    !regex.test(NamaEkstrakulikuler) ||
     !regex.test(rencanaKegiatan) ||
     !regex.test(prestasiCapaian) ||
     !regex.test(perkembanganKeterampilan) ||
@@ -92,11 +94,11 @@ function submitForm() {
   submitButton.disabled = true;
 
   var url =
-    "https://script.google.com/macros/s/AKfycbw-lf4ptaPa7nJyqUY5dTdYqcTuN8U7e8WM84tS3gr5rit6yQE2omygLn2a4D05D1_d/exec";
+    "https://script.google.com/macros/s/AKfycbzl5z4_yuUOSwuYsyc9-f0aCSCvfxqRmWDgKx4XkGI1M0x5YaRWRJqaj_bgtGz1XkNU/exec";
   var formData = new FormData();
   formData.append("Nama Pembina", name);
   formData.append("Tanggal Pelaporan", visitDate);
-  formData.append("Nama Ekstrakulikuler", purpose);
+  formData.append("Nama Ekstrakulikuler", NamaEkstrakulikuler);
   formData.append("Jumlah Anggota", jumlahAnggota);
   formData.append("Rencana Kegiatan", rencanaKegiatan);
   formData.append("Prestasi dan Capaian", prestasiCapaian);
@@ -142,7 +144,7 @@ function resetForm() {
     // Reset other form fields if needed
     document.getElementById("name").value = "";
     document.getElementById("visitDate").value = "";
-    document.getElementById("purpose").value = "";
+    document.getElementById("NamaEkstrakulikuler").value = "";
     document.getElementById("jumlahAnggota").value = "";
     document.getElementById("rencanaKegiatan").value = "";
     document.getElementById("prestasiCapaian").value = "";
