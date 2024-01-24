@@ -47,6 +47,7 @@ $(document).ready(function () {
   });
 });
 function submitForm() {
+<<<<<<< HEAD
   var name = document.getElementById('name').value;
   var visitDate = document.getElementById('visitDate').value;
   var purpose = document.getElementById('purpose').value;
@@ -105,9 +106,13 @@ function showCheckmark() {
   submitButton.innerHTML = 'Success \u2713';
   submitButton.classList.add('success');
 
+=======
+>>>>>>> 075557334f6112b3c2d1e456091c7d1fe4237e0d
   var name = document.getElementById("name").value;
   var visitDate = document.getElementById("visitDate").value;
-  var purpose = document.getElementById("purpose").value;
+  var NamaEkstrakulikuler = document.getElementById(
+    "NamaEkstrakulikuler"
+  ).value;
   var jumlahAnggota = document.getElementById("jumlahAnggota").value;
   var rencanaKegiatan = document.getElementById("rencanaKegiatan").value;
   var prestasiCapaian = document.getElementById("prestasiCapaian").value;
@@ -120,7 +125,7 @@ function showCheckmark() {
   if (
     !name ||
     !visitDate ||
-    !purpose ||
+    !NamaEkstrakulikuler ||
     !jumlahAnggota ||
     !rencanaKegiatan ||
     !prestasiCapaian ||
@@ -131,16 +136,33 @@ function showCheckmark() {
     alert("Silakan isi semua input!");
     return;
   }
+
+=======
+  // Validate name, purpose, rencanaKegiatan, prestasiCapaian, perkembanganKeterampilan, kendalaTantangan
+  var regex = /^[a-zA-Z.,;'"\s]+$/;
+
+  if (
+    !regex.test(name) ||
+    !regex.test(NamaEkstrakulikuler) ||
+    !regex.test(rencanaKegiatan) ||
+    !regex.test(prestasiCapaian) ||
+    !regex.test(perkembanganKeterampilan) ||
+    !regex.test(kendalaTantangan)
+  ) {
+    alert("Mohon mengisi hanya dengan huruf, titik, koma, atau tanda kutip.");
+    return;
+  }
+>>>>>>> 075557334f6112b3c2d1e456091c7d1fe4237e0d
   var submitButton = document.querySelector(".submit-button");
   submitButton.innerHTML = "being processed";
   submitButton.disabled = true;
 
   var url =
-    "https://script.google.com/macros/s/AKfycbw-lf4ptaPa7nJyqUY5dTdYqcTuN8U7e8WM84tS3gr5rit6yQE2omygLn2a4D05D1_d/exec";
+    "https://script.google.com/macros/s/AKfycbzl5z4_yuUOSwuYsyc9-f0aCSCvfxqRmWDgKx4XkGI1M0x5YaRWRJqaj_bgtGz1XkNU/exec";
   var formData = new FormData();
   formData.append("Nama Pembina", name);
   formData.append("Tanggal Pelaporan", visitDate);
-  formData.append("Nama Ekstrakulikuler", purpose);
+  formData.append("Nama Ekstrakulikuler", NamaEkstrakulikuler);
   formData.append("Jumlah Anggota", jumlahAnggota);
   formData.append("Rencana Kegiatan", rencanaKegiatan);
   formData.append("Prestasi dan Capaian", prestasiCapaian);
@@ -178,6 +200,7 @@ function showCheckmark() {
 
 function resetForm() {
   setTimeout(function () {
+<<<<<<< HEAD
     var submitButton = document.querySelector('.submit-button');
     submitButton.innerHTML = 'Submit';
     submitButton.classList.remove('success');
@@ -195,6 +218,8 @@ function resetForm() {
     document.getElementById('dokumentasi').value = '';
 
 
+=======
+>>>>>>> 075557334f6112b3c2d1e456091c7d1fe4237e0d
     var submitButton = document.querySelector(".submit-button");
     submitButton.innerHTML = "Submit";
     submitButton.classList.remove("success");
@@ -203,7 +228,7 @@ function resetForm() {
     // Reset other form fields if needed
     document.getElementById("name").value = "";
     document.getElementById("visitDate").value = "";
-    document.getElementById("purpose").value = "";
+    document.getElementById("NamaEkstrakulikuler").value = "";
     document.getElementById("jumlahAnggota").value = "";
     document.getElementById("rencanaKegiatan").value = "";
     document.getElementById("prestasiCapaian").value = "";
@@ -214,12 +239,19 @@ function resetForm() {
 }
 
 function previewImage() {
+<<<<<<< HEAD
   var input = document.getElementById('dokumentasi');
   var preview = document.getElementById('preview');
+=======
+>>>>>>> 075557334f6112b3c2d1e456091c7d1fe4237e0d
   var input = document.getElementById("dokumentasi");
   var preview = document.getElementById("preview");
 
   preview.src = input.value;
 }
 
+<<<<<<< HEAD
 
+=======
+document.getElementById("dokumentasi").addEventListener("change", previewImage);
+>>>>>>> 075557334f6112b3c2d1e456091c7d1fe4237e0d
